@@ -1,0 +1,16 @@
+Category,Course_Code,Course_Name,Elective_Name,L,T,P
+SCI,23ECE101,Nature Inspired Engineering,,3,0,0
+SCI,23MAT124,Engineering Mathematics I,,3,1,0
+ENGG,23ECE102,Problem Solving and Algorithmic Thinking,,1,0,3
+ENGG,23ECE103,Fundamentals of Electrical Engineering,,3,0,0
+SCI,23ECE104,Physics of Semiconductors,,3,0,0
+ENGG,23ECE105,Computer Programming,,3,0,0
+ENGG,23ECE181,Electrical Engineering Laboratory,,0,0,3
+ENGG,23ECE182,Computer Programming Laboratory,,0,0,3
+SCI,23MAT130,Engineering Mathematics II,,3,1,0
+ENGG,23ECE111,Electronic Devices and Circuits,,3,0,0
+SCI/ENGG,23ECE112,Signal Processing I,,3,0,0
+SCI/ENGG,23ECE114,Network Analysis,,3,0,0
+ENGG,23ECE183,Signal Processing-I Laboratory,,0,0,3
+ENGG,23ECE184,Introduction to Internet of Things,,0,0,3
+ENGG,23ECE185,Electronic Devices & Circuits Laboratory,,0,0,3

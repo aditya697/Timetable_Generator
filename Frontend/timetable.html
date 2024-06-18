@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Batch - Timetable Generator</title>
+<style>
+  /* Style rules will be similar for all pages, so I'm omitting them here for brevity */
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Timetable Generator</h1>
+  <p>Define the batches for scheduling.</p>
+</div>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="courses.html">Courses</a>
+  <a href="teachers.html">Teachers</a>
+  <a href="rooms.html">Rooms</a>
+  <a href="batch.html">Batch</a>
+  <a href="courseteacher.html">Course Teacher</a>
+  <a href="semestercourses.html">Semester Courses</a>
+  <a href="timetable.html" class="active">Timetable</a>
+
+</div>
+
+<div class="main">
+
+<div class="form-section">
+  <button type="button" onclick="generateTimetable()">Generate Timetable</button>
+  </div>
+</div>
+
+<div id="timetable-container"></div>
+
+<div class="footer">
+  <p>© 2023 Timetable Generator, Inc.</p>
+</div>
+
+<script src="JS/script.js"></script>
+<script src="JS/timetable.js"></script>
+
+</body>
+</html>

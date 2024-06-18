@@ -1,0 +1,95 @@
+-- Course Table with Category
+CREATE TABLE Course (
+    Category VARCHAR(255) NOT NULL,
+    Course_Code VARCHAR(10) PRIMARY KEY NOT NULL,
+    Course_Name VARCHAR(255) NOT NULL,
+    Lecture_Hours INT NOT NULL,
+    Tutorial_Hours INT NOT NULL,
+    Practical_Hours INT NOT NULL
+);
+
+CREATE TABLE Course_Elective (
+	Course_Code VARCHAR(10) NOT NULL,
+	Elective_Name VARCHAR(255)
+);
+-- Teacher Table
+CREATE TABLE Teacher (
+    Teacher_ID INT PRIMARY KEY NOT NULL,
+    Teacher_Name VARCHAR(255) NOT NULL
+);
+
+-- CourseTeacher Table
+CREATE TABLE CourseTeacher (
+    Course_Code VARCHAR(10) REFERENCES Course(Course_Code) NOT NULL,
+    Teacher_ID INT REFERENCES Teacher(Teacher_ID) NOT NULL
+);
+
+CREATE TABLE Branch (
+	Degree_Name VARCHAR(255) NOT NULL,
+	Branch_Name VARCHAR(255) PRIMARY KEY NOT NULL
+);
+
+-- Batch Table
+CREATE TABLE Batch (
+	Semester VARCHAR(2) NOT NULL,
+    Batch_Name VARCHAR(255) NOT NULL,
+    Branch_Name VARCHAR(255) REFERENCES Branch(Branch_Name) NOT NULL,
+    Batch_Size INT NOT NULL,
+	PRIMARY KEY (Semester,Batch_Name)
+);
+
+-- Semester Table
+CREATE TABLE SemesterCourses (
+    Semester VARCHAR(2) NOT NULL,
+    Branch_Name VARCHAR(255) REFERENCES Branch(Branch_Name) NOT NULL,
+    Course_Code VARCHAR(10) REFERENCES Course(Course_Code) NOT NULL
+);
+
+-- Classroom Table
+CREATE TABLE Classroom (
+    Room_No VARCHAR(10) PRIMARY KEY NOT NULL,
+    Room_Capacity INT NOT NULL
+);
+
+-- BatchCourseClassroom Table
+CREATE TABLE BatchCourseClassroom (
+	Semester VARCHAR(2) NOT NULL,
+    Batch_Name VARCHAR(255) NOT NULL,
+    Room_No VARCHAR(10) REFERENCES Classroom(Room_no) NOT NULL,
+	Sessions VARCHAR(10) NOT NULL,
+    Course_Display_Name VARCHAR(255),
+    Teacher_ID INT REFERENCES Teacher(Teacher_ID) NOT NULL,
+	Slot VARCHAR(10) NOT NULL,
+	FOREIGN KEY (Semester, Batch_Name) REFERENCES Batch(Semester, Batch_Name)
+);
+
+CREATE TABLE timetable (
+    id SERIAL PRIMARY KEY,
+    semester VARCHAR(255) NOT NULL,
+    batch VARCHAR(255) NOT NULL,
+    day VARCHAR(255) NOT NULL,
+    slot_0 VARCHAR(255),
+    slot_1 VARCHAR(255),
+    slot_2 VARCHAR(255),
+    slot_3 VARCHAR(255),
+    slot_4 VARCHAR(255),
+    slot_5 VARCHAR(255),
+    slot_6 VARCHAR(255),
+    slot_7 VARCHAR(255),
+    slot_8 VARCHAR(255),
+    slot_9 VARCHAR(255)
+);
+
+INSERT INTO Branch(Degree_Name,Branch_Name)
+VALUES
+('BTECH','Computer Science and Engineering'),
+('BTECH','Artificial Intelligence and Engineering'),
+('BTECH','Electronics and Communication and Engineering'),
+('BTECH','Electrical and Computer Engineering')
+
+INSERT INTO Course_Elective(Course_Code,Elective_Name)
+VALUES
+('23CSE331','Professional Elective 1'),
+('23CSE332','Professional Elective 1'),
+('23CSE333','Professional Elective 1'),
+('23CSE334','Professional Elective 1')

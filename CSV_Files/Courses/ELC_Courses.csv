@@ -1,0 +1,12 @@
+Category,Course_Code,Course_Name,Elective_Name,L,T,P
+SCI,23MAT122,Calculus Matrix Algebra and Ordinary Differential Equations,,3,1,0
+ENGG,23ELC101,Problem Solving and Algorithmic Thinking,,1,0,2
+ENGG,23MEE102,Engineering Graphics and 3D Modelling,,2,0,3
+ENGG,23MEE182,Manufacturing Practice-B,,0,0,3
+SCI,23MAT125,Complex Analysis and Transforms,,3,1,0
+ENGG,23ELC111,Electrical Circuit Analysis,,3,0,0
+ENGG,23ELC112,Electronic Devices & Circuits,,3,0,0
+ENGG,23ELC113,Digital Electronics,,3,0,0
+ENGG,23ELC114,Computer Programming,,2,0,2
+ENGG,23EEE183,Electrical Engineering Practice,,0,0,2
+ENGG,23ELC181,Electrical Electronics & Digital lab,,0,0,2

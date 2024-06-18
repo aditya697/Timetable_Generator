@@ -1,0 +1,20 @@
+DROP TABLE BatchCourseClassroom;
+DROP TABLE Classroom;
+DROP TABLE SemesterCourses;
+DROP TABLE Batch;
+DROP TABLE Branch;
+DROP TABLE CourseTeacher;
+DROP TABLE Teacher;
+DROP TABLE Course_Elective;
+DROP TABLE Course;
+DROP TABLE timetable;
+
+SELECT * FROM Course;
+SELECT * FROM Teacher;
+SELECT * FROM CourseTeacher;
+SELECT * FROM Branch;
+SELECT * FROM Batch;
+SELECT * FROM SemesterCourses;
+SELECT * FROM Classroom;
+SELECT * FROM BatchCourseClassroom;
+SELECT * FROM timetable;

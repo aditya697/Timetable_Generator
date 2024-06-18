@@ -1,0 +1,12 @@
+Category,Course_Code,Course_Name,Elective_Name,L,T,P
+SCI,22MAT110,Mathematics for Computing 1,,2,1,3
+SCI,22PHY106,Computational Physics,,2,0,3
+ENGG,22AIE101,Problem Solving & C Programming,,2,1,3
+ENGG,22AIE102,Elements of Computing Systems 1,,2,0,3
+ENGG,22MAT121,Discrete Mathematics,,2,0,3
+SCI,22MAT122,Mathematics for Computing 2,,2,1,3
+ENGG,22AIE111,Object Oriented Programming in Java,,2,1,3
+ENGG,22AIE112,Data Structures & Algorithms 1,,2,1,3
+ENGG,22AIE113,Elements of Computing Systems – 2,,2,0,3
+ENGG,22AIE114,Introduction to Electrical and Electronics Engineering,,2,0,3
+ENGG,22AIE115,User Interface Design,,2,0,3

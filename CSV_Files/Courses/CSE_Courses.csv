@@ -1,0 +1,16 @@
+Category,Course_Code,Course_Name,Elective_Name,L,T,P
+HUM,23ENG101,Technical Communication,,2,0,3
+SCI,23MAT107,Calculus,,3,0,2
+CSE,23CSE101,Computational Problem Solving,,3,0,2
+ENGG,23EEE104,Introduction to Electrical and Electronics Engineering,,3,0,0
+ENGG,23EEE184,Basic Electrical and Electronics Engineering Practice,,0,0,2
+ENGG,23CSE102,Computer Hardware Essentials,,1,0,2
+HUM,22ADM101,Foundations of Indian Heritage,,2,0,1
+HUM,22AVP103,Mastery Over Mind,,1,0,2
+SCI,23MAT116,Discrete Mathematics,,3,0,2
+SCI,23MAT117,Linear Algebra,,3,0,2
+CSE,23CSE111,Object Oriented Programming,,3,0,2
+SCI,23PHY115,Modern Physics,,2,1,0
+CSE,23CSE113,User Interface Design,,2,0,2
+ENGG,23MEE115,Manufacturing Practice,,0,0,3
+HUM,22ADM111,Glimpses of Glorious India,,2,0,1

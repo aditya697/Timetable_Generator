@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Teacher Mapping - Timetable Generator</title>
+<style>
+  /* Style rules will be similar for all pages, so I'm omitting them here for brevity */
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Timetable Generator</h1>
+  <p>Assign semester courses.</p>
+</div>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="courses.html">Courses</a>
+  <a href="teachers.html">Teachers</a>
+  <a href="rooms.html">Rooms</a>
+  <a href="batch.html">Batch</a>
+  <a href="courseteacher.html">Course Teacher</a>
+  <a href="semestercourses.html" class="active">Semester Courses</a>
+  <a href="timetable.html">Timetable</a>
+
+</div>
+
+<div class="main">
+  <div class="form-section">
+    <h2>Semester Course Mapping</h2>
+    <div class="file-input-container">
+    <button class="file-input-button" type="button" onclick="document.getElementById('coursesCSV').click()">Choose File</button>
+    <input type="file" id="SemesterCoursesCSV" accept=".csv" required style="opacity: 0; position: absolute; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer;">
+  </div>
+  <button type="button" onclick="convertCSVtoJSON('SemesterCoursesCSV', 'UploadSemesterCoursesTable' , ['StoreSemesterCoursesButton'])">Upload and Display CSV</button>
+  <div id="UploadSemesterCoursesTable" class="csv-display-table">
+    <!-- The uploaded CSV content will be displayed here in a table -->
+  </div>
+  <button type="button" id="StoreSemesterCoursesButton" style="display: none;">Store Data</button>
+  </div>
+
+<div class="form-section">
+  <h2>View Semester Course Data</h2>
+  <button type="button" id="ViewSemesterCoursesButton">View Data</button>
+  <div id="ViewSemesterCoursesTable" class="csv-display-table">
+  </div>
+</div>
+
+<div class="form-section">
+  <h2>Add a Semester Course</h2>
+  <form id="coursesForm">
+    <label for="semester">Semester:</label>
+    <input type="text" id="semester" name="semester" required>
+
+    <label for="branchname">Branch Name:</label>
+    <input type="text" id="branchname" name="branchname" required>
+
+    <label for="code">Course Code:</label>
+    <input type="text" id="code" name="code" required>
+
+    <button type="button" class="add-button" onclick="addSemesterCourse()">Add Semester Course</button>
+    <button type="button" class="update-button" onclick="updateSemesterCourse()">Update Semester Course</button>
+    <button type="button" class="delete-button" onclick="deleteSemesterCourse()">Delete Semester Course</button>
+  </form>
+</div>
+</div>
+
+<div class="footer">
+  <p>© 2023 Timetable Generator, Inc.</p>
+</div>
+
+<script src="JS/script.js"></script>
+<script src="JS/semestercourse.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teachers - Timetable Generator</title>
+<style>
+  /* Style rules will be similar for all pages, so I'm omitting them here for brevity */
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Timetable Generator</h1>
+  <p>Define the teachers for your timetable.</p>
+</div>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="courses.html">Courses</a>
+  <a href="teachers.html" class="active">Teachers</a>
+  <a href="rooms.html">Rooms</a>
+  <a href="batch.html">Batch</a>
+  <a href="courseteacher.html">Course Teacher</a>
+  <a href="semestercourses.html">Semester Courses</a>
+  <a href="timetable.html">Timetable</a>
+
+</div>
+
+<div class="main">
+
+<div class="form-section">
+  <h2>Upload Teachers via CSV</h2>
+  <div class="file-input-container">
+    <button class="file-input-button" type="button" onclick="document.getElementById('teachersCSV').click()">Choose File</button>
+    <input type="file" id="teachersCSV" accept=".csv" required style="opacity: 0; position: absolute; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer;">
+  </div>
+  <button type="button" onclick="convertCSVtoJSON('teachersCSV', 'UploadTeachersTable' , ['StoreTeachersButton'])">Upload and Display CSV</button>
+  <div id="UploadTeachersTable" class="csv-display-table">
+    <!-- The uploaded CSV content will be displayed here in a table -->
+  </div>
+  <button type="button" id="StoreTeachersButton" style="display: none;">Store Data</button>
+</div>
+
+<div class="form-section">
+  <h2>View Teacher Data</h2>
+  <button type="button" id="ViewTeachersButton">View Data</button>
+  <div id="ViewTeachersTable" class="csv-display-table">
+  </div>
+</div>
+
+<div class="form-section">
+  <h2>Add a Teacher</h2>
+  <form id="teachersForm">
+    <label for="teacherId">Teacher ID:</label>
+    <input type="text" id="teacherId" name="teacherId" required>
+
+    <label for="teacherName">Teacher Name:</label>
+    <input type="text" id="teacherName" name="teacherName" required>
+
+    <button type="button" class="add-button" onclick="addTeacher()">Add Teacher</button>
+    <button type="button" class="update-button" onclick="updateTeacher()">Update Teacher</button>
+    <button type="button" class="delete-button" onclick="deleteTeacher()">Delete Teacher</button>
+  </form>
+</div>
+</div>
+
+<div class="footer">
+  <p>© 2023 Timetable Generator, Inc.</p>
+</div>
+
+<script src="JS/script.js"></script>
+<script src="JS/teachers.js"></script>
+
+</body>
+</html>
